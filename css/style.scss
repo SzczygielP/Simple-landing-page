@@ -1,0 +1,80 @@
+$colors: (
+    color1: #FFF,
+);
+
+@function color($color-name) {
+    @return map-get($colors, $color-name )
+  };
+
+body {
+	margin: 0;
+}
+p {
+	word-wrap: break-word;
+	max-width: 50%;
+	margin: 0 auto;
+}
+.col-2 {
+	width: 16.66%;
+}
+.col-4 {
+	width: 33.33%;
+}
+.col-12 {
+	width: 100%;
+}
+.col-3 {
+	width: 25%;
+}
+.col-8 {
+	width: 66.66%;
+}
+[class*="col-"] {
+	float: left;
+	min-height: 1px;
+	height: 100%;
+	margin-top: 100px;
+}
+.container {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	&::after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+.row {
+	&::after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+header {
+    height: 100vh;
+    width: 100%;
+	background-size: cover;
+	background-position: center;
+    background-image: url(https://images.pexels.com/photos/1738402/pexels-photo-1738402.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+	nav {
+        img { padding: 10px 0;
+        }
+		ul {
+			margin: auto;
+			float: right;
+			list-style-type: none;
+			li {
+				display: inline-block;
+				a {
+					line-height: 50px;
+					display: block;
+                    padding: 0 20px;
+                    text-decoration: none;
+                    color: color(color1);
+				}
+			}
+		}
+	}
+}
