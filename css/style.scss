@@ -121,3 +121,29 @@ section.services {
     }
 	text-align: center;
 }
+
+section.portfolio {
+    background-color: lightgray;
+    text-align: center;
+    h2 {color: color(color3);
+        font-size: 35px;
+        padding-top: 100px;
+    }
+    p {margin-top: -20px;}
+    .gallery {
+        padding-top: 50px;        
+        display: flex;
+        flex-wrap: wrap;
+        flex-flow: row wrap;
+        justify-content: center;
+        img {
+            max-width: 100%;
+            height: auto;
+            padding: 25px;
+
+        }
+        .photo {
+            width: 33%;
+        }
+    }
+}
